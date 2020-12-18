@@ -1,0 +1,17 @@
+{
+    "LADRC parameters": {
+    },
+    "PID parameters": {
+        "PID_Kd":  0,
+        "PID_Ki": 0.05,
+        "PID_Kp": 5
+    },
+    "global settings": {
+        "controller_type": 64,
+        "reference_signal": 1.6,
+        "sys_running_state": 1
+    },
+    "openloop parameters": {
+
+    }
+}

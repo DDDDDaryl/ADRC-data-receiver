@@ -76,12 +76,19 @@ void sendDemo()
     open_loop_input_step_amp	= 0xB9,
     open_loop_input_step_time	= 0xBA,
     deadzone_compensation_dac1	= 0xC9,
-    deadzone_compensation_dac2	= 0xD1
+    deadzone_compensation_dac2	= 0xD1,
+    ratio						1 0 01, 0 101	0x95
+	sigma						1 0 01, 0 110   0x96
+    st_disturbance_est_gain     1 0 01, 0 111   0x97
+    新增：100为ADRC参数编号拓展
+    st_need_acc_threashold      1 0 10, 0 001   0xA1
     */
+
+atomic<bool> terminate_fl(false);
 
 int main(int argc, char **argv) {
 
-    if (argc != 2) {
+    if (argc != 3) {
         cerr << "Wrong input param." << endl;
         system("pause");
         exit(1);
@@ -89,6 +96,7 @@ int main(int argc, char **argv) {
 
     auto serial = argv[1];
     auto sserial = string(serial);
+    auto cfg = argv[2];
 
     //check
     if ( sserial.find("COM") ) {
@@ -97,14 +105,19 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-    receiver recv(serial, 115200);
+    receiver recv(serial, 115200, cfg);
     string input;
+
+
 
     while (cin >> input) {
         if (input == "send" || input == "s")
             recv.send();
-        else if (input == "quit" || input == "q")
+        else if (input == "quit" || input == "q") {
+            terminate_fl = true;
+            while ( !recv.is_writing_finished() );
             break;
+        }
         else
             cout << "Usage: \"send\" to send current configure to board." << endl;
     }

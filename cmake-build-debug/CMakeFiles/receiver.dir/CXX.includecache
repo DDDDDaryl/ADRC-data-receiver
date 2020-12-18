@@ -386,32 +386,6 @@ utility
 vector
 -
 
-C:/Users/Frank Young/Desktop/receiver/main.cpp
-iostream
--
-string
--
-vector
--
-cstdint
--
-WzSerialPort.h
-C:/Users/Frank Young/Desktop/receiver/WzSerialPort.h
-csv2.hpp
-C:/Users/Frank Young/Desktop/receiver/csv2.hpp
-thread
--
-atomic
--
-iomanip
--
-receiver.h
-C:/Users/Frank Young/Desktop/receiver/receiver.h
-sender.h
-C:/Users/Frank Young/Desktop/receiver/sender.h
-regex
--
-
 C:/Users/Frank Young/Desktop/receiver/receiver.cpp
 iomanip
 -
@@ -447,14 +421,12 @@ unordered_map
 -
 mutex
 -
+atomic
+-
 WzSerialPort.h
 C:/Users/Frank Young/Desktop/receiver/WzSerialPort.h
 csv2.hpp
 C:/Users/Frank Young/Desktop/receiver/csv2.hpp
-json.hpp
-C:/Users/Frank Young/Desktop/receiver/json.hpp
-
-C:/Users/Frank Young/Desktop/receiver/sender.h
 json.hpp
 C:/Users/Frank Young/Desktop/receiver/json.hpp
 

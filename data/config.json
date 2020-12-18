@@ -3,17 +3,17 @@
         "LADRC_b0": 60,
         "LADRC_wc": 10,
         "LADRC_wc_bar": 10,
-        "LADRC_wo": 100,
-        "ratio": 1,
+        "LADRC_wo": 200,
+        "ratio": 0.2,
         "sigma": 1
     },
     "PID parameters": {
         
     },
     "global settings": {
-        "deadzone_compensation_dac1": -1.5,
-        "deadzone_compensation_dac2": 1.5,
-        "reference_signal": 1,
+        "deadzone_compensation_dac1": -1.6,
+        "deadzone_compensation_dac2": 1.6,
+        "reference_signal": 1.1,
         "sys_running_state": 1
     },
     "openloop parameters": {

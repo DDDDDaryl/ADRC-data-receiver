@@ -18,6 +18,7 @@
 #include <regex>
 #include <unordered_map>
 #include <mutex>
+#include <atomic>
 #include "WzSerialPort.h"
 #include "csv2.hpp"
 #include "json.hpp"
@@ -72,6 +73,7 @@ class receiver {
 private:
     static const size_t buf_size = 1024;
     constexpr static const char *cfg_name = "config.json";
+    std::string custom_cfg_name;
 
     state sta = header;
 
@@ -88,6 +90,8 @@ private:
     std::string pattern;
     std::regex r;
 
+    std::atomic<bool> is_writing_done;
+
 private:
     void parse(std::vector<std::vector<std::string>> &table);
 
@@ -101,8 +105,11 @@ public:
     int send();
 
 public:
+    std::atomic<bool>& is_writing_finished();
+
+public:
     receiver() = default;
-    explicit receiver(std::string port_ = "COM9", size_t baudrate_ = 115200);
+    explicit receiver(std::string port_ = "COM9", size_t baudrate_ = 115200, std::string cfg = cfg_name);
     ~receiver();
 };
 

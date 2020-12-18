@@ -7,6 +7,8 @@
 
 using json = nlohmann::json;
 
+extern std::atomic<bool> terminate_fl;
+
 enum info_id {
     begin_border = 0x80,
     info_id_ref = 0x81,
@@ -30,7 +32,7 @@ std::map<info_id, std::pair<std::string, float>> data_table {
         {info_id_ESO_first_order_state, {"ESO 1st order", 0.0f}},
         {info_id_ESO_second_order_state, {"ESO 2nd order", 0.0f}},
         {info_id_ESO_third_order_state, {"ESO 3rd order", 0.0f}},
-        {info_id_ESO_fourth_order_state, {"ESO 4th order", 0.0f}},
+        //{info_id_ESO_fourth_order_state, {"ESO 4th order", 0.0f}},
 };
 
 std::unordered_map<std::string, uint8_t> snd_tbl {
@@ -56,10 +58,12 @@ std::unordered_map<std::string, uint8_t> snd_tbl {
         {"deadzone_compensation_dac1",      0xC9},
         {"deadzone_compensation_dac2",      0xD1},
         {"ratio",                           0x95},
-        {"sigma",                           0x96}
+        {"sigma",                           0x96},
+        {"st_disturbance_est_gain",         0x97},
+        {"st_need_acc_threashold",          0xA1}
 };
 
-void receiver::receive() {
+void receiver::receive(){
     while (true) {
         time_t curr_time;
         struct tm *ptminfo;
@@ -83,9 +87,13 @@ void receiver::receive() {
         std::vector<std::string> table_idx;
         std::vector<std::vector<std::string>> table;
 
+        is_writing_done = false;
+
         for (const auto& key : data_table)
             table_idx.emplace_back(key.second.first);
         writer.write_row(table_idx);
+
+        is_writing_done = true;
 
         while (true) {
             memset(buf, 0, buf_size);
@@ -98,6 +106,7 @@ void receiver::receive() {
 
             parse(table);
 
+
 //            std::cout << sta << std::endl;
 
 //            for (const auto &i : table) {
@@ -107,11 +116,14 @@ void receiver::receive() {
 //            }
 
 
-            if (sta == header && !table.empty()) {
+            if ( (sta == header && !table.empty()) || terminate_fl ) {
 //                std::cout << "row written" << std::endl;
+                is_writing_done = false;
                 writer.write_rows(table);
                 std::vector<std::vector<std::string>> tmp;
                 table.swap(tmp);
+                is_writing_done = true;
+                if ( terminate_fl ) return;
                 //table.erase(table.begin(), table.end());
             }
 
@@ -251,12 +263,13 @@ void receiver::wrapper(receiver *ptr) {
     ptr->thread_cycle();
 }
 
-receiver::receiver(std::string port_, size_t baudrate_)
-        : port(std::move(port_)), baudrate(baudrate_)
+receiver::receiver(std::string port_, size_t baudrate_, std::string cfg)
+        : port(std::move(port_)), baudrate(baudrate_), custom_cfg_name(cfg),  is_writing_done(true)
 {
     auto ret = w.open(port.c_str(), baudrate, 0, 8, 1, 1);
     if (!ret) {
         std::cerr << "Open port " << port << " failed" << std::endl;
+        system("pause");
         exit(1);
     }
 
@@ -274,7 +287,8 @@ int receiver::send() {
     char cwd_buf[200]{};
     char* cwd = getcwd(cwd_buf, 200);
     std::string tmp(cwd);
-    std::string str_cwd = tmp + "\\" + cfg_name;
+    //std::string str_cwd = tmp + "\\" + cfg_name;
+    std::string str_cwd = tmp + "\\" + custom_cfg_name;
     std::fstream fs(str_cwd);
     json j;
     if (!fs) {
@@ -289,15 +303,17 @@ int receiver::send() {
                                                 {"run_time", 0},
                                                 {"reference_signal", 0},
                                                 {"deadzone_compensation_dac1", 0},
-                                                {"deadzone_compensation_dac2", 0},
-                                                {"ratio", 0},
-                                                {"sigma", 0}
+                                                {"deadzone_compensation_dac2", 0}
                                         }},
                 {"LADRC parameters",    {
                                                 {"LADRC_wc",                 15},
                                                 {"LADRC_wo",                  45},
                                                 {"LADRC_b0",                 60},
-                                                {"LADRC_wc_bar",              4}
+                                                {"LADRC_wc_bar",              4},
+                                                {"ratio", 0},
+                                                {"sigma", 0},
+                                                {"st_disturbance_est_gain", 1},
+                                                {"st_need_acc_threashold", 0.1}
                                         }},
                 {"PID parameters",      {
                                                 {"PID_Kp",                   0},
@@ -325,6 +341,7 @@ int receiver::send() {
         std::cerr << "Missing configure file, automatically created.\r\n";
         std::cerr << "Exited. Configure parameters and rerun.\r\n";
         fs.close();
+        system("pause");
         exit(0);
 
     } else {
@@ -397,3 +414,6 @@ int receiver::send() {
     return byte_send;
 }
 
+std::atomic<bool>& receiver::is_writing_finished() {
+    return is_writing_done;
+}
