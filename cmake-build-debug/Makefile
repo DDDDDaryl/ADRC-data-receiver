@@ -58,19 +58,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Frank Young\Desktop\receiver"
+CMAKE_SOURCE_DIR = "C:\Users\Frank Young\Desktop\ADRC-data-receiver"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Frank Young\Desktop\receiver\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = "C:\Users\Frank Young\Desktop\receiver\cmake-build-debug"
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -89,7 +89,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Frank Young\Desktop\receiver\cmake-build-debug\CMakeFiles" "C:\Users\Frank Young\Desktop\receiver\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" "C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Frank Young\Desktop\receiver\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,33 @@ WzSerialPort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/WzSerialPort.cpp.s
 .PHONY : WzSerialPort.cpp.s
 
+configure.obj: configure.cpp.obj
+
+.PHONY : configure.obj
+
+# target to build an object file
+configure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/configure.cpp.obj
+.PHONY : configure.cpp.obj
+
+configure.i: configure.cpp.i
+
+.PHONY : configure.i
+
+# target to preprocess a source file
+configure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/configure.cpp.i
+.PHONY : configure.cpp.i
+
+configure.s: configure.cpp.s
+
+.PHONY : configure.s
+
+# target to generate assembly for a file
+configure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/configure.cpp.s
+.PHONY : configure.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -223,6 +250,33 @@ receiver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/receiver.cpp.s
 .PHONY : receiver.cpp.s
 
+ref_sender.obj: ref_sender.cpp.obj
+
+.PHONY : ref_sender.obj
+
+# target to build an object file
+ref_sender.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/ref_sender.cpp.obj
+.PHONY : ref_sender.cpp.obj
+
+ref_sender.i: ref_sender.cpp.i
+
+.PHONY : ref_sender.i
+
+# target to preprocess a source file
+ref_sender.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/ref_sender.cpp.i
+.PHONY : ref_sender.cpp.i
+
+ref_sender.s: ref_sender.cpp.s
+
+.PHONY : ref_sender.s
+
+# target to generate assembly for a file
+ref_sender.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\receiver.dir\build.make CMakeFiles/receiver.dir/ref_sender.cpp.s
+.PHONY : ref_sender.cpp.s
+
 sender.obj: sender.cpp.obj
 
 .PHONY : sender.obj
@@ -262,12 +316,18 @@ help:
 	@echo ... WzSerialPort.obj
 	@echo ... WzSerialPort.i
 	@echo ... WzSerialPort.s
+	@echo ... configure.obj
+	@echo ... configure.i
+	@echo ... configure.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... receiver.obj
 	@echo ... receiver.i
 	@echo ... receiver.s
+	@echo ... ref_sender.obj
+	@echo ... ref_sender.i
+	@echo ... ref_sender.s
 	@echo ... sender.obj
 	@echo ... sender.i
 	@echo ... sender.s

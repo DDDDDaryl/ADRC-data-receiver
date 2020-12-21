@@ -4,10 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Frank Young/Desktop/receiver/WzSerialPort.cpp" "C:/Users/Frank Young/Desktop/receiver/cmake-build-debug/CMakeFiles/receiver.dir/WzSerialPort.cpp.obj"
-  "C:/Users/Frank Young/Desktop/receiver/main.cpp" "C:/Users/Frank Young/Desktop/receiver/cmake-build-debug/CMakeFiles/receiver.dir/main.cpp.obj"
-  "C:/Users/Frank Young/Desktop/receiver/receiver.cpp" "C:/Users/Frank Young/Desktop/receiver/cmake-build-debug/CMakeFiles/receiver.dir/receiver.cpp.obj"
-  "C:/Users/Frank Young/Desktop/receiver/sender.cpp" "C:/Users/Frank Young/Desktop/receiver/cmake-build-debug/CMakeFiles/receiver.dir/sender.cpp.obj"
+  "C:/Users/Frank Young/Desktop/ADRC-data-receiver/WzSerialPort.cpp" "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir/WzSerialPort.cpp.obj"
+  "C:/Users/Frank Young/Desktop/ADRC-data-receiver/configure.cpp" "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir/configure.cpp.obj"
+  "C:/Users/Frank Young/Desktop/ADRC-data-receiver/main.cpp" "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir/main.cpp.obj"
+  "C:/Users/Frank Young/Desktop/ADRC-data-receiver/receiver.cpp" "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir/receiver.cpp.obj"
+  "C:/Users/Frank Young/Desktop/ADRC-data-receiver/ref_sender.cpp" "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir/ref_sender.cpp.obj"
+  "C:/Users/Frank Young/Desktop/ADRC-data-receiver/sender.cpp" "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir/sender.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

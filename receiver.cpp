@@ -79,6 +79,7 @@ void receiver::receive(){
 
         if (!stream) {
             std::cerr << "file open failed\r\n";
+            system("pause");
             exit(1);
         }
 
@@ -399,10 +400,10 @@ int receiver::send() {
     *send_buf_ptr = 0x0a;
 //    *send_buf_ptr++ = 0x0d;
 //    *send_buf_ptr = 0x0a;
-    for (int i = 0; i < len + 4; ++i) {
-        printf("%02x ", *(send_buf + i));
-    }
-    std::cout << std::endl;
+//    for (int i = 0; i < len + 4; ++i) {
+//        printf("%02x ", *(send_buf + i));
+//    }
+//    std::cout << std::endl;
 
 
     int byte_send = w.send(send_buf, len + 4);

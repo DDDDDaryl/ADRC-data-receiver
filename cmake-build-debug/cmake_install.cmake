@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Frank Young/Desktop/receiver
+# Install script for directory: C:/Users/Frank Young/Desktop/ADRC-data-receiver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Frank Young/Desktop/receiver/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

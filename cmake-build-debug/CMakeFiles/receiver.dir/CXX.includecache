@@ -6,63 +6,29 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Frank Young/Desktop/receiver/WzSerialPort.h
+C:/Users/Frank Young/Desktop/ADRC-data-receiver/configure.cpp
+configure.h
+C:/Users/Frank Young/Desktop/ADRC-data-receiver/configure.h
 
-C:/Users/Frank Young/Desktop/receiver/csv2.hpp
-windows.h
--
-unistd.h
--
-cstdint
--
-iterator
--
-string
--
-system_error
--
-windows.h
--
-type_traits
--
-algorithm
--
-fcntl.h
--
-sys/mman.h
--
-sys/stat.h
--
-unistd.h
--
-windows.h
--
-unistd.h
--
-memory
--
-system_error
--
-utility
--
-cstring
--
-istream
--
-string
--
-cstring
--
+C:/Users/Frank Young/Desktop/ADRC-data-receiver/configure.h
 fstream
--
-string
--
-utility
 -
 iostream
 -
+string
+-
+regex
+-
+unordered_set
+-
+unordered_map
+-
+vector
+-
+json.hpp
+C:/Users/Frank Young/Desktop/ADRC-data-receiver/json.hpp
 
-C:/Users/Frank Young/Desktop/receiver/json.hpp
+C:/Users/Frank Young/Desktop/ADRC-data-receiver/json.hpp
 algorithm
 -
 cstddef
@@ -385,48 +351,4 @@ utility
 -
 vector
 -
-
-C:/Users/Frank Young/Desktop/receiver/receiver.cpp
-iomanip
--
-receiver.h
-C:/Users/Frank Young/Desktop/receiver/receiver.h
-
-C:/Users/Frank Young/Desktop/receiver/receiver.h
-thread
--
-unistd.h
--
-utility
--
-vector
--
-string
--
-cstring
--
-fstream
--
-ctime
--
-sstream
--
-map
--
-cstdint
--
-regex
--
-unordered_map
--
-mutex
--
-atomic
--
-WzSerialPort.h
-C:/Users/Frank Young/Desktop/receiver/WzSerialPort.h
-csv2.hpp
-C:/Users/Frank Young/Desktop/receiver/csv2.hpp
-json.hpp
-C:/Users/Frank Young/Desktop/receiver/json.hpp
 

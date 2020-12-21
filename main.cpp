@@ -10,6 +10,8 @@
 #include "receiver.h"
 #include "sender.h"
 #include <regex>
+#include "ref_sender.h"
+#include "configure.h"
 
 using namespace std;
 //using namespace csv2;
@@ -88,18 +90,25 @@ atomic<bool> terminate_fl(false);
 
 int main(int argc, char **argv) {
 
-    if (argc != 3) {
-        cerr << "Wrong input param." << endl;
-        system("pause");
-        exit(1);
-    }
+    configure config;
+    config.parse();
+    auto params = config.get_settings();
 
-    auto serial = argv[1];
-    auto sserial = string(serial);
-    auto cfg = argv[2];
+//    if (argc != 3) {
+//        cerr << "Wrong input param." << endl;
+//        system("pause");
+//        exit(1);
+//    }
+//
+//    auto serial = argv[1];
+//    auto sserial = string(serial);
+//    auto cfg = argv[2];
+
+    auto serial = params.PC_COM;
+    auto cfg = params.MCU_config_filename;
 
     //check
-    if ( sserial.find("COM") ) {
+    if ( serial.find("COM") ) {
         cerr << "illegal input." << endl;
         system("pause");
         exit(1);
@@ -108,7 +117,9 @@ int main(int argc, char **argv) {
     receiver recv(serial, 115200, cfg);
     string input;
 
-
+    /*temporary entry*/
+    string IC_COM = params.IC_COM;
+    ref_sender reference_sender(IC_COM, 115200, params.reference_sample_time, params.reference_filename);
 
     while (cin >> input) {
         if (input == "send" || input == "s")
@@ -117,6 +128,15 @@ int main(int argc, char **argv) {
             terminate_fl = true;
             while ( !recv.is_writing_finished() );
             break;
+        }
+        else if (input == "track" || input == "t") {
+            if ( reference_sender.if_busy() ) {
+                cerr << "Thread busy" << endl;
+                continue;
+            }
+
+            if (reference_sender.read_ref_file() )
+                reference_sender.send();
         }
         else
             cout << "Usage: \"send\" to send current configure to board." << endl;
