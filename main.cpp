@@ -135,7 +135,7 @@ int main(int argc, char **argv) {
                 continue;
             }
 
-            if (reference_sender.read_ref_file() )
+            if ( reference_sender.read_ref_file() )
                 reference_sender.send();
         }
         else

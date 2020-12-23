@@ -58,12 +58,15 @@ bool ref_sender::read_ref_file() {
             int curr_cell = 0;
             for (const auto cell : row) {
                 if (curr_cell++ == ref_idx) {
+                    cell_val.clear();
                     cell.read_value(cell_val);
                     m_ref_buf.emplace_back(stof(cell_val));
                 }
             }
         }
     }
+//    for (auto f : m_ref_buf)
+//        cout << f << endl;
 
     return true;
 }

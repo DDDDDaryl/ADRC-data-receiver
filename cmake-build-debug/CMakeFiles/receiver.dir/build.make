@@ -53,10 +53,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,80 +79,80 @@ include CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/main.cpp.obj: CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/receiver.dir/main.cpp.obj"
-	D:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\main.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\main.cpp"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\main.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\main.cpp"
 
 CMakeFiles/receiver.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiver.dir/main.cpp.i"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\main.cpp" > CMakeFiles\receiver.dir\main.cpp.i
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\main.cpp" > CMakeFiles\receiver.dir\main.cpp.i
 
 CMakeFiles/receiver.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiver.dir/main.cpp.s"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\main.cpp" -o CMakeFiles\receiver.dir\main.cpp.s
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\main.cpp" -o CMakeFiles\receiver.dir\main.cpp.s
 
 CMakeFiles/receiver.dir/WzSerialPort.cpp.obj: CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/WzSerialPort.cpp.obj: ../WzSerialPort.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/receiver.dir/WzSerialPort.cpp.obj"
-	D:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\WzSerialPort.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\WzSerialPort.cpp"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\WzSerialPort.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\WzSerialPort.cpp"
 
 CMakeFiles/receiver.dir/WzSerialPort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiver.dir/WzSerialPort.cpp.i"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\WzSerialPort.cpp" > CMakeFiles\receiver.dir\WzSerialPort.cpp.i
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\WzSerialPort.cpp" > CMakeFiles\receiver.dir\WzSerialPort.cpp.i
 
 CMakeFiles/receiver.dir/WzSerialPort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiver.dir/WzSerialPort.cpp.s"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\WzSerialPort.cpp" -o CMakeFiles\receiver.dir\WzSerialPort.cpp.s
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\WzSerialPort.cpp" -o CMakeFiles\receiver.dir\WzSerialPort.cpp.s
 
 CMakeFiles/receiver.dir/receiver.cpp.obj: CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/receiver.cpp.obj: ../receiver.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/receiver.dir/receiver.cpp.obj"
-	D:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\receiver.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\receiver.cpp"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\receiver.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\receiver.cpp"
 
 CMakeFiles/receiver.dir/receiver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiver.dir/receiver.cpp.i"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\receiver.cpp" > CMakeFiles\receiver.dir\receiver.cpp.i
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\receiver.cpp" > CMakeFiles\receiver.dir\receiver.cpp.i
 
 CMakeFiles/receiver.dir/receiver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiver.dir/receiver.cpp.s"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\receiver.cpp" -o CMakeFiles\receiver.dir\receiver.cpp.s
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\receiver.cpp" -o CMakeFiles\receiver.dir\receiver.cpp.s
 
 CMakeFiles/receiver.dir/sender.cpp.obj: CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/sender.cpp.obj: ../sender.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/receiver.dir/sender.cpp.obj"
-	D:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\sender.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\sender.cpp"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\sender.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\sender.cpp"
 
 CMakeFiles/receiver.dir/sender.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiver.dir/sender.cpp.i"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\sender.cpp" > CMakeFiles\receiver.dir\sender.cpp.i
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\sender.cpp" > CMakeFiles\receiver.dir\sender.cpp.i
 
 CMakeFiles/receiver.dir/sender.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiver.dir/sender.cpp.s"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\sender.cpp" -o CMakeFiles\receiver.dir\sender.cpp.s
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\sender.cpp" -o CMakeFiles\receiver.dir\sender.cpp.s
 
 CMakeFiles/receiver.dir/ref_sender.cpp.obj: CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/ref_sender.cpp.obj: ../ref_sender.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/receiver.dir/ref_sender.cpp.obj"
-	D:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\ref_sender.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\ref_sender.cpp"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\ref_sender.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\ref_sender.cpp"
 
 CMakeFiles/receiver.dir/ref_sender.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiver.dir/ref_sender.cpp.i"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\ref_sender.cpp" > CMakeFiles\receiver.dir\ref_sender.cpp.i
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\ref_sender.cpp" > CMakeFiles\receiver.dir\ref_sender.cpp.i
 
 CMakeFiles/receiver.dir/ref_sender.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiver.dir/ref_sender.cpp.s"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\ref_sender.cpp" -o CMakeFiles\receiver.dir\ref_sender.cpp.s
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\ref_sender.cpp" -o CMakeFiles\receiver.dir\ref_sender.cpp.s
 
 CMakeFiles/receiver.dir/configure.cpp.obj: CMakeFiles/receiver.dir/flags.make
 CMakeFiles/receiver.dir/configure.cpp.obj: ../configure.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/receiver.dir/configure.cpp.obj"
-	D:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\configure.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\configure.cpp"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\receiver.dir\configure.cpp.obj -c "C:\Users\Frank Young\Desktop\ADRC-data-receiver\configure.cpp"
 
 CMakeFiles/receiver.dir/configure.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiver.dir/configure.cpp.i"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\configure.cpp" > CMakeFiles\receiver.dir\configure.cpp.i
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Frank Young\Desktop\ADRC-data-receiver\configure.cpp" > CMakeFiles\receiver.dir\configure.cpp.i
 
 CMakeFiles/receiver.dir/configure.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiver.dir/configure.cpp.s"
-	D:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\configure.cpp" -o CMakeFiles\receiver.dir\configure.cpp.s
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Frank Young\Desktop\ADRC-data-receiver\configure.cpp" -o CMakeFiles\receiver.dir\configure.cpp.s
 
 # Object files for target receiver
 receiver_OBJECTS = \
@@ -166,21 +166,21 @@ receiver_OBJECTS = \
 # External object files for target receiver
 receiver_EXTERNAL_OBJECTS =
 
-receiver.exe: CMakeFiles/receiver.dir/main.cpp.obj
-receiver.exe: CMakeFiles/receiver.dir/WzSerialPort.cpp.obj
-receiver.exe: CMakeFiles/receiver.dir/receiver.cpp.obj
-receiver.exe: CMakeFiles/receiver.dir/sender.cpp.obj
-receiver.exe: CMakeFiles/receiver.dir/ref_sender.cpp.obj
-receiver.exe: CMakeFiles/receiver.dir/configure.cpp.obj
-receiver.exe: CMakeFiles/receiver.dir/build.make
-receiver.exe: CMakeFiles/receiver.dir/linklibs.rsp
-receiver.exe: CMakeFiles/receiver.dir/objects1.rsp
-receiver.exe: CMakeFiles/receiver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable receiver.exe"
+../bin/receiver.exe: CMakeFiles/receiver.dir/main.cpp.obj
+../bin/receiver.exe: CMakeFiles/receiver.dir/WzSerialPort.cpp.obj
+../bin/receiver.exe: CMakeFiles/receiver.dir/receiver.cpp.obj
+../bin/receiver.exe: CMakeFiles/receiver.dir/sender.cpp.obj
+../bin/receiver.exe: CMakeFiles/receiver.dir/ref_sender.cpp.obj
+../bin/receiver.exe: CMakeFiles/receiver.dir/configure.cpp.obj
+../bin/receiver.exe: CMakeFiles/receiver.dir/build.make
+../bin/receiver.exe: CMakeFiles/receiver.dir/linklibs.rsp
+../bin/receiver.exe: CMakeFiles/receiver.dir/objects1.rsp
+../bin/receiver.exe: CMakeFiles/receiver.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Frank Young\Desktop\ADRC-data-receiver\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ..\bin\receiver.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\receiver.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/receiver.dir/build: receiver.exe
+CMakeFiles/receiver.dir/build: ../bin/receiver.exe
 
 .PHONY : CMakeFiles/receiver.dir/build
 

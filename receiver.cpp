@@ -73,7 +73,10 @@ void receiver::receive(){
         std::string filename;
         std::stringstream ss;
         ss << ptminfo->tm_year + 1900 << "-" << ptminfo->tm_mon + 1 << "-" << ptminfo->tm_mday << "-" << ptminfo->tm_hour << "-" << ptminfo->tm_min;
-        filename = ss.str() + ".csv";
+        filename = csv_file_path_prefix + ss.str() + ".csv";
+
+        if ( access(csv_file_path_prefix.c_str(), F_OK) == -1)
+            mkdir(csv_file_path_prefix.c_str());
 
         std::ofstream stream(filename);
 

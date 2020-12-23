@@ -19,6 +19,7 @@
 #include <unordered_map>
 #include <mutex>
 #include <atomic>
+#include <direct.h>>
 #include "WzSerialPort.h"
 #include "csv2.hpp"
 #include "json.hpp"
@@ -74,6 +75,7 @@ private:
     static const size_t buf_size = 1024;
     constexpr static const char *cfg_name = "config.json";
     std::string custom_cfg_name;
+    std::string csv_file_path_prefix {"./csv-data/"};
 
     state sta = header;
 

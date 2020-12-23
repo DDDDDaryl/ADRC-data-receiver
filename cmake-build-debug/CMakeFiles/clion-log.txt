@@ -1,4 +1,4 @@
-"D:\CLion\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Frank Young\Desktop\ADRC-data-receiver"
+"E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Frank Young\Desktop\ADRC-data-receiver"
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug
