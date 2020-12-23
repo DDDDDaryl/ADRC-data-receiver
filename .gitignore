@@ -1,5 +1,5 @@
-/.idea/*
-/cmake-build-debug/*
+.idea/
+cmake-build-debug/
 *.csv
-/data/*
+data/
 /bin/csv-data/*
