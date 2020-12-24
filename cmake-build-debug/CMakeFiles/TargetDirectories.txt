@@ -1,3 +1,0 @@
-C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/receiver.dir
-C:/Users/Frank Young/Desktop/ADRC-data-receiver/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-"E:\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\receiver.dir/objects.a
-E:\MinGW\mingw64\bin\ar.exe cr CMakeFiles\receiver.dir/objects.a @CMakeFiles\receiver.dir\objects1.rsp
-E:\MinGW\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\receiver.dir/objects.a -Wl,--no-whole-archive  -o ..\bin\receiver.exe -Wl,--out-implib,..\bin\libreceiver.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\receiver.dir\linklibs.rsp
