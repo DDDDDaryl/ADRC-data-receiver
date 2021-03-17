@@ -1,0 +1,23 @@
+{
+    "LADRC parameters": {
+        "Sample_Rate_Hz": 300,
+        "LADRC_b0": 115,
+        "LADRC_wc": 10,
+        "LADRC_wo": 240,
+        "LADRC_wc_bar": 4,
+        "ratio": 1,
+        "sigma": 1
+    },
+    "PID parameters": {
+
+    },
+    "global settings": {
+        "deadzone_compensation_dac1": -1.35,
+        "deadzone_compensation_dac2": 1.4,
+        "reference_signal" :1,
+        "sys_running_state": 1
+    },
+    "openloop parameters": {
+
+    }
+}

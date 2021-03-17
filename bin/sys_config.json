@@ -1,9 +1,9 @@
 {
 	"param": {
-        		"PC_COM": "COM3",
-        		"IC_COM": "COM5",
-       		"MCU_config_filename": "config_ADRC.json",
+        		"PC_COM": "COM5",
+        		"IC_COM": "COM6",
+       		"MCU_config_filename": "config_ADRC_200Hz.json",
         		"reference_filename": "ref.csv",
-        		"reference_sample_time":33.333333333
+        		"reference_sample_time":33.333333
             	}
 }

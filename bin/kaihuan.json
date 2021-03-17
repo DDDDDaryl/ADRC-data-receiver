@@ -1,0 +1,15 @@
+{
+    "LADRC parameters": {
+        "Sample_Rate_Hz": 300
+    },
+    "PID parameters": {
+
+    },
+    "global settings": {
+        "Is_close_loop": 0,
+        "sys_running_state": 1
+    },
+    "openloop parameters": {
+        "open_loop_input_step_amp": 1
+    }
+}
